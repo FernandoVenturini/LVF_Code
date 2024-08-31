@@ -80,9 +80,7 @@ body {
   text-decoration: none;
 }
 .menu-right ul a:hover {
-  color: var(--primaryColor);
-  border: 1px solid var(--secundaryColor);
-  background-color: var(--terciaryColor);
+  color: var(--secundaryColor);
   font-weight: 600;
 }
 
@@ -91,22 +89,24 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
-  margin: 0 auto 6rem auto;
+  margin: 0 auto 0 auto;
   background-image: url("image/img-header.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
+  border-bottom: 1px solid #cccccc4e;
 }
 
-.container-section .title-section-1 {
+.container-section .content-text .content-text-img .title-section-1 {
   color: #fff;
   font-size: 3em;
 }
 
-.container-section .title-section-1 span {
+.container-section .content-text .content-text-img .title-section-1 span {
   color: var(--terciaryColor);
+  font-size: 1.5em;
 }
 
 .content-text-img {
@@ -129,29 +129,29 @@ header {
 }
 /* END HEADER */
 
-/* START SECTION 2 */ 
-.moon, .web {
+/* START SECTION 1 */ 
+.container {
   width: 100%;
-  height: 80vh;
+  height: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   flex-direction: column;
 }
 
-.sub-container-moon, .sub-container-web {
+.container .sub-container {
   max-width: 80%;
-  margin: auto;
+  margin: 3rem auto;
 }
 
-.moon h1, .sub-container-web h1 {
+.container h1, .sub-container h1 {
   color: var(--secundaryColor);
-  font-size: 44px;
+  font-size: 3em;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
-.moon p, .sub-container-web p {
+.container p, .sub-container p {
   color: var(--quaternaryColor);
   line-height: 1.8em;
   width: 100%;
@@ -159,7 +159,11 @@ header {
   text-align: justify;
   text-indent: 2em;
 }
-/* END SECTION 2*/
+/* END SECTION 1*/
+
+/* SECTION 2 */
+
+/* END - SECTION 2 */
 
 /* FOOTER */
 .main-footer {
