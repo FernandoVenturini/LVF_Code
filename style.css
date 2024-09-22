@@ -203,7 +203,7 @@ footer span a:hover {
 }
 .services .title {
   text-align: center;
-  margin: 40px 0;
+  margin: 60px 0;
   font-weight: 400;
   font-size: 45px;
   color: var(--seventhColor);
@@ -476,7 +476,7 @@ footer span a:hover {
   align-items: center;
 }
 .right form .button-area button {
-  color: var(--seventhColor);
+  color: var(--primaryColor);
   display: block;
   width: 160px !important;
   height: 45px;
@@ -489,10 +489,12 @@ footer span a:hover {
   flex-wrap: wrap;
   border: 2px solid var(--terciaryColor);
   transition: all 0.3s ease;
+  background: var(--seventhColor);
 }
 .right form .button-area button:hover {
-  background: var(--quaternaryColor);
-  color: var(--seventhColor);
+  background: var(--terciaryColor);
+  color: var(--primaryColor);
+  border: 2px solid var(--seventhColor);
 }
 @media (max-width: 947px) {
   .contact .contact-content .column {
