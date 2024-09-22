@@ -526,6 +526,7 @@ footer span a:hover {
       justify-content: center;
       background: #b02ab7;
       border-radius: 6px;
+      border: none;
   }
   footer {
       font-size: 12px;
