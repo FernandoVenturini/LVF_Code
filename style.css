@@ -496,6 +496,10 @@ footer span a:hover {
   color: var(--primaryColor);
   border: 2px solid var(--seventhColor);
 }
+
+footer {
+    font-size: 12px;
+}
 @media (max-width: 947px) {
   .contact .contact-content .column {
       width: 100%;
@@ -527,8 +531,5 @@ footer span a:hover {
       background: #b02ab7;
       border-radius: 6px;
       border: none;
-  }
-  footer {
-      font-size: 12px;
   }
 }
