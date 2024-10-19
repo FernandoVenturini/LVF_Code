@@ -13,11 +13,11 @@
 }
 
 html, body {
-  height: 100%;
+  height: 100% !important;
 }
 
 body {
-  background-color: var(--primaryColor);
+  background-color: var(--primaryColor) !important;
   display: flex;
   flex-direction: column;
 }
@@ -39,9 +39,9 @@ body {
     display: none;
 }
 .max-width {
-  max-width: 1300px;
-  padding: 0 10px;
-  margin: auto;     
+  width: 100% !important;
+  padding: 0px !important;
+  margin: 0px 20px !important;     
 }
 .navbar .logo {
   display: flex;
@@ -51,6 +51,7 @@ body {
   color: var(--terciaryColor);
   font-size: 35px;
   font-weight: 500;
+  text-decoration: none;
 }
 .navbar .logo span {
   color: var(--quaternaryColor);
@@ -59,12 +60,13 @@ body {
 }
 .navbar {
   position: fixed;
-  width: 100%;
+  max-width: 100% !important;
   z-index: 999; /*DEFINE A ORDEM DO ELEMENTO*/
   padding: 20px 0;
   font-family: 'Ubuntu', sans-serif;
   background-color: #000;
   border-bottom: 1px solid #888;
+  margin: 0;
 }
 .navbar .max-width {
   display: flex;
@@ -85,9 +87,13 @@ body {
   font-size: 18px;
   font-weight: 400;
   margin-left: 25px;
+  list-style: none;
+  text-decoration: none;
 }
 .navbar .menu li a:hover {
-  color: var(--terciaryColor);
+  background-image: linear-gradient(341deg, #f00 23%, #524add 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }/*END - MENU NAVBAR*/
 
 /* START - FOOTER */
@@ -165,16 +171,17 @@ footer span a:hover {
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
-  height: 640px;
+  height: 620px;
   font-family: 'Ubuntu', sans-serif;
-  background-image: url("./image/img-header.jpg");
+  background-image: url("");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  margin-top: 100px;
+  background-size: cover;
 }
 .top .max-width h2 {
-  color: #fff;
+  background-image: linear-gradient(341deg, #f00 23%, #524add 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 35px;
   text-align: center;
 }
@@ -188,12 +195,19 @@ footer span a:hover {
   justify-content: space-between;
   margin: 0 auto;
 }
+.content {
+  color: var(--quaternaryColor) !important;
+}
 
 /*SECTION 2 - SERVICES*/
 .services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   background-color: var(--fifthColor);
   font-family: 'Ubuntu',sans-serif;
+  width: 100%;
 }
 .services .serv-content {
   display: flex;
@@ -206,11 +220,12 @@ footer span a:hover {
   margin: 60px 0;
   font-weight: 400;
   font-size: 45px;
-  color: var(--seventhColor);
+  color: var(--terciaryColor);
 }
 .services .serv-content .card {
   width: calc(33% - 20px);
   background: var(--fifthColor);
+  background-size: cover;
   text-align: center;
   border-radius: 6px;
   padding: 50px 25px;
@@ -225,42 +240,42 @@ footer span a:hover {
   background-image: url("https://i0.wp.com/theme.files.wordpress.com/2023/02/stax-featured.jpg?ssl=1&fit=479%2C360");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 300px;
 }
 .services .serv-content .img-2 {
   background-image: url("https://i0.wp.com/theme.files.wordpress.com/2023/06/screenshot.png?ssl=1&fit=479%2C360");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 300px;
 }
 .services .serv-content .img-3 {
   background-image: url("https://i0.wp.com/theme.files.wordpress.com/2023/10/regular-card-product-logo.jpg?ssl=1&fit=479%2C360");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 300px;
 }
 .services .serv-content .img-4 {
   background-image: url("https://i0.wp.com/s2.wp.com/wp-content/themes/pub/bark/screenshot.png?fit=479%2C360");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 300px;
 }
 .services .serv-content .img-5 {
   background-image: url("https://i0.wp.com/s2.wp.com/wp-content/themes/pub/cakely/screenshot.png?fit=479%2C360");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 300px;
 }
 .services .serv-content .img-6 {
   background-image: url("https://i0.wp.com/theme.files.wordpress.com/2023/02/natural-featured.jpeg?ssl=1&fit=479%2C360");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 300px;
 }
 .services .serv-content .card i {
@@ -391,9 +406,11 @@ footer span a:hover {
   background-color: var(--primaryColor);
   font-family: 'Ubuntu', sans-serif;
   margin-top: 100px;
+  width: 100%;
 }
 .contact .max-width {
   background: var(--primaryColor);
+  max-width: 90%;
 }
 .contact .title {
   text-align: center;
@@ -407,9 +424,13 @@ footer span a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin: 0 3rem 3rem 8rem;
 }
 .contact .contact-content .column {
   width: calc(50%);
+}
+.contact .contact-content .left {
+  height: 45vh;
 }
 .contact .contact-content .left p {
   text-align: justify;
@@ -423,7 +444,8 @@ footer span a:hover {
   align-items: center;
 }
 .contact .contact-content .row .info {
-  margin-left: 30px;
+  margin-left: 40px;
+  margin-top: -3rem;
 }
 .contact .contact-content .row i {
   font-size: 25px;
@@ -444,7 +466,7 @@ footer span a:hover {
 .contact .right form .fields .field {
   height: 45px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 .contact .right form .textarea {
   height: 80px;
@@ -465,7 +487,7 @@ footer span a:hover {
 }
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus {
-  background: var(--seventhColor);
+  background: var(--terciaryColor);
 }
 .contact .right form .textarea textarea {
   padding-top: 10px;
@@ -489,47 +511,107 @@ footer span a:hover {
   flex-wrap: wrap;
   border: 2px solid var(--terciaryColor);
   transition: all 0.3s ease;
-  background: var(--seventhColor);
+  background: var(--terciaryColor);
 }
 .right form .button-area button:hover {
   background: var(--terciaryColor);
   color: var(--primaryColor);
   border: 2px solid var(--seventhColor);
 }
-
 footer {
     font-size: 12px;
 }
 @media (max-width: 947px) {
   .contact .contact-content .column {
-      width: 100%;
-      margin-bottom: 35px;
+    width: 100%;
+    margin-bottom: 35px;
   }
   .contact .right form .button-area {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #b02ab7;
-      border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b02ab7;
+    border-radius: 6px;
   }
 }
 @media (max-width: 500px) {
   .contact .title {
-      margin-top: 50px;
+    margin-top: 50px;
   }
   .contact .right form .fields {
-      flex-direction: column;
+    flex-direction: column;
   }
   .contact .right form .name,
   .contact .right form .email{
-      margin: 0;
+    margin: 0;
   }
   .contact .right form .button-area {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #b02ab7;
-      border-radius: 6px;
-      border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b02ab7;
+    border-radius: 6px;
+    border: none;
   }
+}
+
+/*ORCAMENTO*/
+.orcamento_title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 44px;
+  color: var(--quaternaryColor);
+  text-align: center;
+  margin: 5rem auto;
+}
+.orcamento_title span {
+  background-image: linear-gradient(341deg, #f00 23%, #524add 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container_budget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+.container_budget .content {
+  margin-bottom: .3rem;
+}
+.container_buget_left {
+  width: 45%;
+  height: 50vh;
+}
+.container_buget_left h2 {
+  color: var(--secundaryColor);
+  margin-left: 3rem;
+  font-size: 34px;
+}
+.container_buget_left .icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+.container_buget_left .icon i {
+  margin-left: 3rem;
+}
+.container_buget_left .icon h3 {
+  color: var(--quaternaryColor);
+  font-size: 28px;
+}
+.container_buget_left li {
+  color: var(--secundaryColor);
+  margin-left: 5rem;
+  line-height: 1.5;
+}
+.container_buget_right {
+  width: 45%;
+  height: 50vh;
+}
+.container_buget_right .form-label {
+  color: var(--quaternaryColor);
 }
