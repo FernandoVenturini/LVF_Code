@@ -42,25 +42,43 @@
 				<div class="column left">
 					<div class="img_estimate"></div>
 				</div>
-				<div class="column left">
-					<form action="#">
-                        <label for="#">Name</label>
-                        <input type="text" placeholder="Enter your name...">
-                        <label for="">Email</label>
-                        <input type="email" name="email" id="emial" placeholder="Enter your best e-mail...">
-                        <label for="">Phone</label>
-                        <input type="tel">
-                        <textarea name="textarea" id="textarea" rows="5"></textarea>
-                        <button class="btn_form"></button>
+				<!--COLUMN - RIGHT-->
+                <div class="column estimate_right">
+                    <div class="text">
+                        Contact Message
+                    </div>
+                    <form>
+                        <div class="fields">
+                            <div class="field name">
+                                <label for="text">Name</label>
+                                <input type="text" placeholder="Enter your name..." required>
+                            </div>
+                            <div class="field email">
+                                <label for="email">E-mail</label>
+                                <input type="email" placeholder="Enter your best e-mail..." required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="textarea">Enter your question</label>
+                            <input type="text" placeholder="Enter about..." required>
+                        </div>
+                        <div class="field textarea">
+                            <label for="textarea">Enter your message</label>
+                            <textarea cols="30" rows="10" placeholder="Enter the content..." required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">Send</button>
+                        </div>
                     </form>
-				</div>
+                </div><!--END - COLUMN RIGHT-->
 			</div>
 		</div>
 	</section>
     <!--END ESTIMATE-->
 
     <footer>
-        <span>&copy; - Todos os direitos reservados - 2024 - <a href="https://lvfcode.com">&lt;LVF_Code&gt;</a></span>
+        <span>&copy; - All rights reserved - 2024 - <a href="https://lvfcode.com">&lt;LVF_Code&gt;</a></span>
     </footer>
 
     <!--AJAX / JQUERY-->

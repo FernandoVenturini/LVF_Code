@@ -207,9 +207,11 @@ body {
 }
 .content {
   color: var(--quaternaryColor);
-  width: 70%;
-  margin: 15rem auto 5rem auto;
+  width: 80%;
+  margin: 15rem auto 8rem auto;
   text-align: center;
+  font-size: 23px;
+  line-height: 1.5;
 }
 /* END SECTION 1 */
 
@@ -371,9 +373,9 @@ body {
 .about {
   width: 100%;
   height: 100vh;
-  margin-top: 8.7rem;
+  margin: 8.7rem auto 8rem auto;
 }
-.about h1 {
+.about h2 {
   color: var(--terciaryColor);
   font-size: 55px;
   text-align: center;
@@ -511,7 +513,11 @@ body {
   height: 100vh;
   margin: 8.7rem auto;
 }
-.container_estimate h2 {
+.container_estimate .max-width {
+  max-width: 100%;
+  height: auto;
+}
+.container_estimate h2, .contact .max-width .title, .about .title, .premium .max-width .title, .services .max-width .title {
   background-image: linear-gradient(341deg, #f00 33%, #524add 60%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -519,13 +525,25 @@ body {
   font-size: 55px;
   margin: 3rem auto;
 }
+.premium-content .estimate_right .text {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--quaternaryColor);
+}
+.premium-content {
+  width: 100%;
+}
+.column {
+  width: 50%;
+}
 .container_estimate .img_estimate {
   background-image: url("image/img_01_estimate.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   border-radius: 6px;
 }
 /*END ESTIMATE*/
@@ -535,12 +553,14 @@ body {
   color: #fff;
   background-color: var(--primaryColor);
   font-family: "Ubuntu", sans-serif;
-  margin-top: 100px;
+  margin: 1.5rem auto;
   width: 100%;
 }
 .contact .max-width {
   background: var(--primaryColor);
   max-width: 90%;
+  margin: 3rem auto;
+  padding: 1rem;
 }
 .contact .title {
   text-align: center;
@@ -554,31 +574,32 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 0 3rem 3rem 8rem;
+  margin: 0 auto;
 }
 .contact .contact-content .column {
   width: calc(50%);
 }
 .contact .contact-content .left {
-  height: 45vh;
+  height: 60vh;
 }
 .contact .contact-content .left p {
   text-align: justify;
 }
 .contact .contact-content .left .icons {
   margin: 10px 0;
+  height: auto;
 }
 .contact .contact-content .row {
   display: flex;
   height: 65px;
   align-items: center;
+  margin: 2rem auto;
 }
 .contact .contact-content .row .info {
-  margin-left: 40px;
-  margin-top: -3rem;
+  margin: 3rem;
 }
 .contact .contact-content .row i {
-  font-size: 25px;
+  font-size: 30px;
   color: var(--terciaryColor);
 }
 .contact .contact-content .info .head {
@@ -588,9 +609,10 @@ body {
   color: #f6f6f6;
 }
 .contact .contact-content .text {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 500;
   margin-bottom: 10px;
+  color: var(--quaternaryColor);
 }
 .contact .right form .field,
 .contact .right form .fields .field {
@@ -623,14 +645,14 @@ body {
   padding-top: 10px;
   resize: none;
 }
-.contact .right form .button-area {
+.button-area {
   display: flex;
   align-items: center;
 }
-.right form .button-area button {
+.button-area button {
   color: var(--primaryColor);
   display: block;
-  width: 160px !important;
+  width: 95% !important;
   height: 45px;
   outline: none;
   font-size: 18px;
@@ -641,12 +663,46 @@ body {
   flex-wrap: wrap;
   border: 2px solid var(--terciaryColor);
   transition: all 0.3s ease;
-  background: var(--terciaryColor);
 }
-.right form .button-area button:hover {
-  background: var(--terciaryColor);
-  color: var(--primaryColor);
-  border: 2px solid var(--seventhColor);
+.estimate_right {
+  padding: 1rem;
+}
+form .name label, form .email label, form .field label {
+  color: #fff;
+}
+.fields .name{
+  margin: 10px 0;
+}
+.fields .name input, .fields .email input {
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px;
+}
+form .field, form .field input {
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px;
+}
+form .field textarea {
+  width: 100%;
+  border-radius: 4px;
+  height: 80px;
+  padding: .5rem;
+}
+.button-area button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border: 1px solid var(--terciaryColor);
+  border-radius: 4px;
+  padding: .5rem;
+  width: 95%;
+  background-image: linear-gradient(341deg, #f00 33%, #524add 60%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 23px;
+  cursor: pointer;
 }
 footer {
   font-size: 12px;
