@@ -373,7 +373,7 @@ body {
 .about {
   width: 100%;
   height: 100vh;
-  margin: 8.7rem auto 8rem auto;
+  margin: 8.7rem auto 3rem auto;
 }
 .about h2 {
   color: var(--terciaryColor);
@@ -403,12 +403,12 @@ body {
   height: 90vh;
   margin: 0 auto;
 }
-.premium .title {
+.premium .max-width .title {
   text-align: center;
   font-weight: 400;
   font-size: 55px;
   color: var(--terciaryColor);
-  margin: 3rem auto 3rem auto;
+  margin: 1rem auto 3rem auto;
 }
 .premium .premium-content {
   max-width: 100%;
@@ -436,7 +436,7 @@ body {
 .premium .premium-content .right {
   width: 40%;
 }
-.premium .premium-content .right .img {
+.premium .premium-content .column .img-2 {
   width: 100%;
   height: 400px;
   object-fit: cover; /*Como sera apresentado o conteudo*/
@@ -503,7 +503,63 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem auto;
+    margin: 1rem 
+  }
+}
+@media (max-width: 648px) {
+  .about {
+    width: 100%;
+    height: auto;
+    margin: 9rem auto 20rem auto;
+  }
+  .about .title,
+  .premium .max-width .title {
+    font-size: 36px !important;
+    margin: 0 !important;
+  }
+  .about p {
+    font-size: 18px;
+    padding: 14px !important;
+  }
+  .premium {
+    width: 100%;
+    height: auto;
+    margin: -20rem auto;
+  }
+  .premium .premium-content {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .premium .premium-content .left .img,
+  .premium .premium-content .column .img-2 {
+    height: 250px;
+  }
+  .premium .max-width {
+    max-width: 100%;
+    max-height: auto;
+    margin-top: 1rem;
+  }
+  .premium .max-width .premium-content .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: auto;
+  }
+  .premium .max-width .premium-content .column .text {
+    font-size: 24px;
+    margin-top: 1rem;
+  }
+  .premium .max-width .premium-content .column p {
+    font-size: 16px;
+  }
+  .section-2 {
+    margin-top: 28rem;
+  }
+  footer{
+    position: fixed;
+    margin-bottom: 0;
   }
 }
 
